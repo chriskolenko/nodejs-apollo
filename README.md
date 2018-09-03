@@ -1,1 +1,3 @@
-# nodejs-apollo
+# API
+
+An example GraphQL Apollo server
