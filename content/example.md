@@ -1,5 +1,5 @@
 ---
-id: home
+id: example
 groupId: simple-example
 type: page
 title: "Welcome to this simple example"

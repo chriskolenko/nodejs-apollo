@@ -1,3 +1,4 @@
+import cors from 'cors';
 import express from 'express';
 import graphqlHTTP from 'express-graphql';
 import { makeExecutableSchema } from 'graphql-tools';
@@ -13,6 +14,10 @@ const app = express();
     const config = await graphql();
     const schema = makeExecutableSchema(config);
 
+    app.use(cors({
+      origin: true,
+      credentials: true,
+    }));
     app.use(
       '/graphql',
       graphqlHTTP({
